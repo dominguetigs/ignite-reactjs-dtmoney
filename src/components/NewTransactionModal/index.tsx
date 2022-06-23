@@ -21,7 +21,7 @@ export function NewTransactionModal({ isOpen, onRequestClose }: NewTransactionMo
 
   const [title, setTitle] = useState('');
   const [amount, setAmount] = useState(0);
-  const [type, setType] = useState('deposit');
+  const [type, setType] = useState<'deposit' | 'withdraw'>('deposit');
   const [category, setCategory] = useState('');
 
   async function handleCreateNewTransaction(e: FormEvent<HTMLElement>) {
